@@ -1,0 +1,26 @@
+﻿@model PayrocTest.ViewModels.LinkFormVm
+@{
+    ViewData["Title"] = "Shorten a URL";
+}
+
+<div class="text-center pt-5">
+    <h3>Welcome to the year 2006</h3>
+
+    <form asp-action="NewLink" class="offset-md-3 col-md-6">
+        <div class="form-group">
+            <div class="input-group">
+                <input asp-for="Link" type="text" class="form-control" placeholder="Please enter a URL to shorten...">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-primary" type="submit">Go!</button>
+                </div>
+            </div>
+            <span asp-validation-for="Link" class="float-left validation-error"></span>
+        </div>
+    </form>
+</div>
+
+@section Scripts
+{
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+}

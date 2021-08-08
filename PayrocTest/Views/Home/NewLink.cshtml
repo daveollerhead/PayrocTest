@@ -1,0 +1,14 @@
+﻿@model PayrocTest.ViewModels.NewLinkVm
+@{
+    ViewData["Title"] = "Your shortened URL";
+}
+
+<div class="pt-5">
+    <h5>Your shortened URL</h5>
+    <div>
+        <a href="@Model.ShortenedUrl" >@Model.ShortenedUrl</a>
+    </div>
+    <div>
+        <a asp-action="Index">Create another short link</a>
+    </div>
+</div>
